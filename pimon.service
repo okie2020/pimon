@@ -1,0 +1,11 @@
+[Unit]
+Description=sensors service
+After=multi-user.target
+
+[Service]
+User=scripts
+Type=idle
+ExecStart=/usr/bin/python3 /root/bin/monitor.py
+
+[Install]
+WantedBy=multi-user.target
